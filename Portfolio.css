@@ -1,0 +1,12 @@
+.header {
+    padding: 40px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+  }
+
+ /* My h3 colours on each sections */
+ h3 {
+    color: #d57113; 
+}
