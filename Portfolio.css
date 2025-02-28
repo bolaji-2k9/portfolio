@@ -1,12 +1,418 @@
-.header {
-    padding: 40px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 20px;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- /* My h3 colours on each sections */
- h3 {
-    color: #d57113; 
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+}
+
+.logo{
+  font-size: 35px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+navmenu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.searchicon{
+  display: flex;
+  font-size: 35px;
+  align-items: center;
+}
+.searchicon:hover{
+  color: rgb(255, 132, 0);
+}
+
+body{
+  color: rgb(2, 2, 84);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menu a{
+  font-size: 20px;
+}
+.menu a:hover{
+  color: rgb(255, 132, 0);
+}
+
+.toggle-button{
+  display:none;
+  flex-direction: column;
+  gap: 0.2rem;
+    
+}
+
+.toggle-button span{
+  background-color: rgb(2, 2, 84);
+  height: 0.3rem;
+  width: 2rem;
+  display: block;
+  border-radius: 3px;
+}
+
+
+
+
+.sub-bg{
+  background: url(./bluebackground2.jpg);
+}
+
+.bluebg{
+   height: 80vh;
+  background-size: cover;
+    display: flex;
+  color: white;
+  align-items: center;
+  gap: 10rem;
+  margin: 0 1.5rem;
+  font-size: 20px
+  
+}
+
+
+
+.icons{
+    height: 30px;
+    margin-top: 15px;
+}
+.icons .btn{
+    background-color: var(--text-color);
+    height: 15px;
+    border-radius: 25px;
+    padding: 10px 30px;
+    color: azure;
+    font-family: var(--body-font);
+    box-shadow: 0 0 10px rgb(255, 132, 0);
+    transition: 400ms ease-in;
+}
+
+.icons .btn:hover{
+    
+    box-shadow: none;
+    background-color: rgb(255, 132, 0);
+}
+
+.icons #icons {
+    color: rgb(255, 132, 0);
+    margin-left: 10px;
+}
+
+
+
+/**.bginfo{
+  color: white;
+  position: absolute;
+  top: 45%;
+  font-size: 20px;
+  left: 2.5rem;
+}**/
+
+
+.aboutheader{
+  text-align: center;
+  font-size: 30px;
+}
+
+.about_me_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  align-items: center;
+  
+}
+.my_picture{
+  width: 400px;
+  border-radius: 2.5rem;
+  justify-self: center;
+  height: 30rem;
+}
+
+.about_text{
+  line-height: 2rem;
+}
+
+.about_text_header{
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+
+.about_boxes{
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  column-gap: 5rem;
+  margin-bottom: 3rem;
+}
+.about_box{
+  text-align: center;
+  border-radius: .25rem;
+  padding: 1rem 1.25rem;
+  background-color: rgb(255, 132, 0);
+  margin-bottom: 3rem;
+  color: white;
+}
+#about_icon{
+  font-size: 1.5rem;
+  color: white;
+ 
+}
+.about_box_title{
+  font-size: var(--small-font-size);
+}
+.about_box_subtitle{
+  font-size: var(--smaller-font-size);
+}
+.about_btn{
+  background-color: rgb(255, 132, 0);
+  height: 20px;
+  border-radius: 25px;
+  font-size: var(--small-font-size) ;
+  padding: 10px 30px;
+  color: rgb(255, 255, 255);
+  font-family: var(--body-font);
+  box-shadow: 0 0 10px  rgb(255, 132, 0);
+  transition: 400ms ease-in;
+}
+
+.about_btn:hover{
+  background-color: var(--text-color);
+  color: azure;
+}
+
+
+
+
+.my_contact_section{
+  background: url(./bluebackground2.jpg);
+}
+
+.contact_me{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+
+.contact_section{
+  background-color: #fbfbfbd3;
+}
+.contact_container{
+  display: grid;
+  grid-template-columns: 300px 340px;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.contact_info{
+  display: grid;
+  row-gap: 1rem;
+}
+.contact_card{
+  background-color: #ffffff ;
+  padding: 1rem;
+  border-radius: .5rem;
+  text-align: center;
+}
+.contact_icon{
+  font-size: 1.8rem;
+  color: var(--background-color);
+  
+}
+.contact_title, .contact_subtitle{
+  font-size: var(--small-font-size);
+}
+.contact_title{
+  font-weight: var(--font-medium);
+}
+.contact_subtitle{
+  display: block;
+  margin-bottom: 1rem;
+}
+.contact_btn{
+  background-color: rgb(255, 132, 0);;
+  height: 5px;
+  border-radius: 20px;
+  font-size: var(--small-font-size) ;
+  padding: 5px 10px;
+  column-gap: .25rem;
+  cursor: pointer;
+  color: black;
+  font-family: var(--body-font);
+  box-shadow: 0 0 10px rgb(255, 132, 0);;
+  transition: 400ms ease-in;
+}
+
+
+.contact_btn:hover{
+  background-color: var(--text-color);
+  color: rgb(3, 3, 3);
+}
+.input_container{
+  position: relative;
+  margin-top: .1rem;
+  margin-bottom: 1.9rem;
+  
+}
+.input{
+  width: 100%;
+  border: 2px solid var(--text-color);
+  background-color: white;
+  padding: .6rem 1.2rem;
+  color: rgb(255, 132, 0);
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+  letter-spacing: .5px;
+  outline: none;
+  border-radius: .5rem;
+  transition: .3s;
+  
+  
+}
+.textarea.input{
+  padding: .8rem 1.2rem;
+  min-height: 140px;
+  border-radius: .5rem;
+  resize: none;
+  color: white;
+  
+}
+.contact_button{
+  background-color: rgb(255, 132, 0);
+  height: 40px;
+  width: 340px;
+  border-radius: 25px;
+  font-size: var(--small-font-size) ;
+  color: black;
+  font-family: var(--body-font);
+  box-shadow: 0 0 10px rgb(255, 132, 0);
+  transition: 400ms ease-in;
+}
+
+.contact_button:hover{
+  background-color: var(--text-color);
+  color: azure;
+}
+.input_container label{
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  padding: 0 .4rem;
+  color: var(--background-color);
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  pointer-events: none;
+  z-index: 60;
+  transition: .3s;
+}
+
+.input_container textarea label{
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.input_container span{
+  position: absolute;
+  top: 0;
+  left: 25px;
+  color: transparent;
+  transform: translateY(-50%);
+  font-size: var(--small-font-size);
+  padding: 0 .4rem;
+  z-index: 50;
+
+}
+
+.input_container span::before,
+.input_container span::after{
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 5px;
+  background-color: var(--text-color);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+.input_container span::before{
+  left: 50%;
+}
+.input_container span::after{
+  right: 50%;
+}
+.input_container.focus label{
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: var(--smaller-font-size);
+}
+.input_container.focus span::before,
+.input_container.focus span::after{
+  width: 50%;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+@media (max-width:800px) {
+  .searchicon{
+    display: none;
+      }
+      .bginfo{
+        top: 30%;
+      }
+}
+
+@media (max-width:600px) {
+  .toggle-button{
+    display: flex;
+  }
+  .menu{
+    display: none; 
+  }
+  .searchicon{
+    display: none;
+  }
+  .bginfo p{
+    display: none;
+}
+.bginfo{
+  left: 0;
+  text-align: center;
+}
+
+.bluebginfo{
+  text-align: center;
+;
+}
+
+.blue_text{
+  display: none;
+}
+
+.my-picture1{
+  display: none;
+}
 }
